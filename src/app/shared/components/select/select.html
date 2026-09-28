@@ -1,0 +1,25 @@
+<mat-form-field appearance="outline" class="mat-input">
+  <mat-label class="paragraph paragraph-2 mat-label">{{ label() }}</mat-label>
+  @if(!!inputControl.value) {
+  <button
+    class="icon"
+    mat-icon-button
+    align-icon
+    matSuffix
+    (click)="$event.preventDefault(); clear()"
+  >
+    <mat-icon class="iconSize">clear</mat-icon>
+  </button>
+  }
+  <mat-select
+    [disableOptionCentering]="true"
+    panelClass="mat-select-panel-below"
+    [formControl]="inputControl"
+  >
+    @for(option of options(); track option) {
+    <mat-option [value]="option">
+      {{ option[optionLabel()] }}
+    </mat-option>
+    }
+  </mat-select>
+</mat-form-field>

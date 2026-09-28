@@ -1,0 +1,84 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  --primary-900: #312e81;
+  --primary-800: #3730a3;
+  --primary-700: #4338ca;
+  --primary-600: #4f46e5;
+  --primary: #6366f1;
+  --primary-400: #818cf8;
+  --primary-300: #a5b4fc;
+  --primary-200: #c7d2fe;
+  --primary-100: #e0e7ff;
+
+  --neutral-900: #18181b;
+  --neutral-800: #27272a;
+  --neutral-700: #3f3f46;
+  --neutral-600: #52525b;
+  --neutral: #71717a;
+  --neutral-400: #a1a1aa;
+  --neutral-300: #d4d4d8;
+  --neutral-200: #e4e4e7;
+  --neutral-100: #f4f4f5;
+
+  --positive-900: #064e3b;
+  --positive-800: #065f46;
+  --positive-700: #047857;
+  --positive-600: #059669;
+  --positive: #10b981;
+  --positive-400: #34d399;
+  --positive-300: #6ee7b7;
+  --positive-200: #a7f3d0;
+  --positive-100: #d1fae5;
+
+  --info-900: #164e63;
+  --info-800: #155e75;
+  --info-700: #0e7490;
+  --info-600: #0891b2;
+  --info: #06b6d4;
+  --info-400: #22d3ee;
+  --info-300: #67e8f9;
+  --info-200: #a5f3fc;
+  --info-100: #cffafe;
+
+  --warning-900: #78350f;
+  --warning-800: #92400e;
+  --warning-700: #b45309;
+  --warning-600: #d97706;
+  --warning: #f59e0b;
+  --warning-400: #fbbf24;
+  --warning-300: #fcd34d;
+  --warning-200: #fde68a;
+  --warning-100: #fef3c7;
+
+  --danger-900: #7f1d1d;
+  --danger-800: #991b1b;
+  --danger-700: #b91c1c;
+  --danger-600: #dc2626;
+  --danger: #ef4444;
+  --danger-400: #f87171;
+  --danger-300: #fca5a5;
+  --danger-200: #fecaca;
+  --danger-100: #fee2e2;
+}
+
+.white {
+  color: var(--white) !important;
+}
+
+.primary-color {
+  color: var(--primary) !important;
+}
+
+.danger-color {
+  color: var(--danger) !important;
+}
+
+.neutral-color {
+  color: var(--neutral) !important;
+}
+
+.black-color {
+  color: var(--black) !important;
+}

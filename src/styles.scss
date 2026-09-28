@@ -1,0 +1,11 @@
+@use './app/shared/styles/colors.scss' as *;
+@use './app/shared/styles/fonts.scss' as *;
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+* {
+  font-family: var(--font);
+}
+
+body {
+  margin: 0;
+}
