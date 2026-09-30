@@ -1,67 +1,43 @@
-# CddExample
+# POC · Component-Driven Development com Angular e Storybook
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+Estudo de caso de **desenvolvimento orientado a componentes (CDD)**: a interface é construída de baixo para cima, começando por componentes isolados e documentados e terminando na montagem de páginas a partir deles.
 
-## Development server
+## O que foi testado
 
-To start a local development server, run:
+- **Componentes isolados no Storybook**: botão, título, container de texto e select, cada um com suas *stories* cobrindo variações (tamanho, peso da fonte, ícone, estado desabilitado etc.).
+- **Documentação automática**: Storybook integrado ao Compodoc, gerando a página de docs a partir dos comentários JSDoc dos componentes (`tags: ['autodocs']`).
+- **APIs modernas do Angular 20**: componentes standalone com `input()`, `input.required()` e `output()` (signals), e o novo controle de fluxo `@if`.
+- **Angular Material** como base visual, com tokens próprios de cor e tipografia em `src/app/shared/styles`.
+- **Composição de página**: `pages/page` monta uma tela inteira só com os componentes do design system, renderizada no próprio Storybook com dados mockados.
+- Testes unitários com Jasmine/Karma para alguns componentes.
 
-```bash
-ng serve
+## Estrutura
+
+```
+src/app/
+├── shared/
+│   ├── components/   # componentes do design system + stories
+│   └── styles/       # tokens de cor e fontes
+└── pages/page/       # página montada a partir dos componentes
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Como rodar
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Pré-requisitos: Node.js 20+ e npm.
 
 ```bash
-ng generate component component-name
+npm install
+npm run storybook    # abre o Storybook em http://localhost:6006
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Outros comandos:
 
 ```bash
-ng generate --help
+npm start                 # aplicação Angular em http://localhost:4200
+npm test                  # testes unitários
+npm run build-storybook   # gera o Storybook estático
 ```
 
-## Building
+## Stack
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-## Running storybook
-
-For Storybook view, run:
-
-```bash
-npm run storybook
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Angular 20 · TypeScript · Angular Material · Storybook 9 · Compodoc · Jasmine/Karma
